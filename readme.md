@@ -2,11 +2,11 @@
 
 <div align="center">
   
-![MediPlant](https://via.placeholder.com/800x400)
+<!-- ![MediPlant](https://via.placeholder.com/800x400) -->
 
 **Identify medicinal plants with AI and access their healing properties in seconds**
 
-[![Python 3.10](https://img.shields.io/badge/python-3.10)](https://www.python.org/downloads/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow 2.x](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
 [![Flask](https://img.shields.io/badge/Flask-2.0.1-lightgrey.svg)](https://flask.palletsprojects.com/)
 
@@ -153,3 +153,4 @@ http://localhost:5000
 ⭐ **If you find this project useful, please consider giving it a star!** ⭐
 
 </div>
+
