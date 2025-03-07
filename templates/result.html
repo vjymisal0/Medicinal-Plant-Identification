@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="../static/css/result.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="prediction-box">
+            <p><strong>Predicted Class:</strong> <span class="predicted-class">{{ predicted_class }}</span></p>
+        </div>
+
+        <h2>More Information</h2>
+        {% if search_results %}
+        <ul class="search-results">
+            {% for result in search_results %}
+            <li><a href="{{ result.link }}" target="_blank">{{ result.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="no-results">No additional information found.</p>
+        {% endif %}
+
+        <div class="button-group">
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Go Back to Home</a>
+            <a href="{{ url_for('cancel') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </div>
+</body>
+
+</html>

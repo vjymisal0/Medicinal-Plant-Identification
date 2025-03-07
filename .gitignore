@@ -1,0 +1,26 @@
+# Environment variables
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Uploaded files (user images, etc.)
+uploads/
+
+# ML models
+*.h5
+
+# Logs and temp files
+*.log
+logs/
+
+
+#dataset
+dataset/
