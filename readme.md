@@ -15,7 +15,7 @@
 ## ✨ Features
 
 - 🔍 **Instant Identification** - Upload any plant image for immediate classification
-- 🧠 **Advanced AI** - Powered by deep learning CNN models with 95%+ accuracy
+- 🧠 **Advanced AI** - Powered by deep learning CNN models with 93%+ accuracy
 - 📚 **Medicinal Information** - Retrieves healing properties and traditional uses
 - 🌐 **Google API Integration** - Fetches verified information from trusted sources
 
