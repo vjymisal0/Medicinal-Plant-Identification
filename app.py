@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, jsonify, request, render_template, redirect, url_for
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
@@ -9,7 +9,11 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
+
 
 # Load the pre-trained model from environment variable
 model_path = os.getenv("MODEL_PATH")
@@ -39,7 +43,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
-        return "No file uploaded"
+        return jsonify({"error": "No file uploaded"}), 400
     
     file = request.files['file']
     
@@ -79,7 +83,10 @@ def predict():
     else:
         search_results.append({"title": "Error performing search.", "link": ""})
 
-    return render_template('result.html', predicted_class=predicted_class_label, search_results=search_results)
+    return jsonify({
+        "predicted_class": predicted_class_label,
+        "search_results": search_results
+    })
 
 @app.route('/cancel')
 def cancel():
