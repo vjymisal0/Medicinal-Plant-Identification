@@ -16,7 +16,8 @@ CORS(app)
 
 
 # Load the pre-trained model from environment variable
-model_path = os.getenv("MODEL_PATH")
+# model_path = os.getenv("MODEL_PATH")
+model_path=r"D:\Github Things\ml\medicinal_plant_classifier.h5"
 try:
     model = tf.keras.models.load_model(model_path)
     print(f"Model loaded successfully from {model_path}")
